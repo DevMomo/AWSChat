@@ -2,10 +2,8 @@ service: awschat
 
 provider:
   name: aws
-  runtime: nodejs8.10
-  stackName: ${self:service}-${self:provider.stage}
-  stage: ${opt:stage, 'dev'}
-  region: ${opt:region, 'ap-southeast-2'}
+  runtime: nodejs12.x
+
   iamRoleStatements:
     - Effect: Allow
       Action:
